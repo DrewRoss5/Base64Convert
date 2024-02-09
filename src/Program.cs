@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Text;
 
 namespace B64Converter{
@@ -26,7 +26,7 @@ namespace B64Converter{
                 string filename = args[1];
                 // verify that the file exists
                 if (!File.Exists(filename)){
-                    Console.WriteLine(String.Format("Error: The file \"{0}\" could not be found!", filename));
+                    Console.WriteLine($"Error: The file \"{filename}\" could not be found!");
                     return;
                 }
                 // read the file's contents
@@ -62,7 +62,7 @@ namespace B64Converter{
                         }
                         break;
                     default:
-                        Console.WriteLine(String.Format("Error: Unrecognized command \"{0}\"", command));
+                        Console.WriteLine($"Error: Unrecognized command \"{command}\"");
                         return;
                 }
                 // write the updated file contents
